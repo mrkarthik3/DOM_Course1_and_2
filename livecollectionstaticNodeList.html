@@ -1,0 +1,42 @@
+<html>
+
+<head></head>
+
+<body>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+
+    <script>
+        // HTML Collection is Live 
+        // It updates as new elements are added automatically.
+        let listItems_tags = document.getElementsByTagName('li');
+        console.log(listItems_tags)
+        console.log(listItems_tags.length)
+
+        listItems_tags[0].parentNode.appendChild(document.createElement('li'))
+        console.log(listItems_tags)
+        console.log(listItems_tags.length)
+
+        // NODE LIST is Static
+        // You have to do a re-query to update NodeList
+
+        let listItems = document.querySelectorAll('li')
+        console.log(listItems);
+        console.log(listItems.length);
+
+        listItems[0].parentNode.appendChild(document.createElement('li'))
+        console.log(listItems);
+        console.log(listItems.length);
+
+        // requery the DOM TO UPDATE NodeList
+        listItems = document.querySelectorAll('li')
+        console.log(listItems);
+        console.log(listItems.length);
+
+    </script>
+</body>
+
+</html>

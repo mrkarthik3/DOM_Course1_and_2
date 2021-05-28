@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            color: rgb(101, 7, 239)
+        }
+
+        button {
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            width: 300px;
+            padding: 1em;
+            margin: 0.5em;
+        }
+    </style>
+    <title>DOM Access</title>
+</head>
+
+<body>
+    <h1>Test Yourself</h1>
+    <h2>getElementsByClassName()</h2>
+    <div>
+        <button onclick="green()" class="green button">Click to change this to green</button>
+        <button onclick="blue()" class="blue button">Click to change this to blue</button>
+        <button onclick="red()" class="red button">Click to change this to red</button>
+        <button onclick="undo()" class="undo button">Undo</button>
+    </div>
+    <script>
+        function green() {
+            // complete the code within here, using getElementsByClassName
+            let color = 'green';
+            let greenButton = document.getElementsByClassName('green');
+            // for (let i = 0; i < greenButton.length; i++) {
+            //     greenButton[i].style.backgroundColor = color;
+            // }
+            // Since there is one button. looping is overkill
+            // The HTML collection will only have one element.
+            // I can access that with [0] array syntax and change its background color
+            greenButton[0].style.backgroundColor = 'green'
+
+        }
+
+        function blue() {
+            // complete the code within here, using getElementsByClassName
+            let color = 'blue';
+            let blueButton = document.getElementsByClassName('blue');
+            // for (let i = 0; i < blueButton.length; i++) {
+            //     blueButton[i].style.backgroundColor = color;
+            // }
+            // Since there is one button. looping is overkill
+            // The HTML collection will only have one element.
+            // I can access that with [0] array syntax and change its background color
+
+            blueButton[0].style.backgroundColor = 'blue'
+
+        }
+
+        function red() {
+            // complete the code within here, using getElementsByClassName
+            let color = 'red';
+            let redButton = document.getElementsByClassName('red');
+            // for (let i = 0; i < redButton.length; i++) {
+            //     redButton[i].style.backgroundColor = color;
+            // }
+            // Since there is one button. looping is overkill
+            // The HTML collection will only have one element.
+            // I can access that with [0] array syntax and change its background color
+            redButton[0].style.backgroundColor = 'red'
+
+        }
+
+        function undo() {
+            // complete the code within here. Note: this will be different code to the other functions above. 
+            let color = 'black';
+            // Looping is necessary in this case
+            let allButtons = document.getElementsByClassName('button');
+            for (let i = 0; i < allButtons.length; i++) {
+                allButtons[i].style.backgroundColor = color;
+            }
+        }
+    </script>
+</body>
+
+</html>

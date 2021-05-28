@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>Creating Elements</title>
+    <style>
+        body {
+            background-color: chartreuse;
+            padding: 30px;
+        }
+
+        h1 {
+            color: darkred;
+            font-size: 72px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-decoration: underline;
+        }
+
+        p {
+            color: darkred;
+            font-size: 36px;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Am I real?</h1>
+    <p class='message'>Am I a figment of your imagination ?</p>
+
+    <script>
+        // lets grab our body element as well as item to clone 'p'
+        let bodyElement = document.querySelector('body')
+        let paraElement = document.querySelector('p.message')
+
+        // lets define our sayWhat function
+        function sayWhat() {
+            let clonedText = paraElement.cloneNode(true)
+            bodyElement.appendChild(clonedText);
+        }
+
+
+        // setInterval(() => {
+
+        //     sayWhat()
+
+        // }, 1000);
+
+        setInterval(sayWhat, 1000)
+
+    </script>
+
+</body>
+
+</html>
