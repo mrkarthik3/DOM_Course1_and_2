@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title>Inline Property-Event Listener</title>
+</head>
+
+<body>
+    <button>Submit Now</button>
+    <script>
+        let btn = document.querySelector('button')
+        btn.onclick = () => boom();
+
+        function boom() {
+            alert("This is inline-property")
+        }
+    </script>
+</body>
+
+</html>
