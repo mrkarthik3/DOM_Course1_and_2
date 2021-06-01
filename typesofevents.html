@@ -1,0 +1,30 @@
+<html>
+
+<body>
+    <label>Name please <input type="text" id="name"></label>
+    <br>
+    <label>
+        What is your favorite animal ?
+        <select name="" id="animal">
+            <option value="dog">Dog</option>
+            <option value="warthog">Warthog</option>
+            <option value="cat">Cat</option>
+        </select>
+    </label>
+    <br>
+    <button id="button">Submit</button>
+    <div id="message"></div>
+    <script>
+        let button = document.getElementById('button')
+        button.addEventListener('click', onButtonClick);
+
+        function onButtonClick() {
+            let messageDiv = document.getElementById('message')
+            let name = document.getElementById('name').value
+            let animal = document.getElementById('animal').value
+            messageDiv.textContent = `Hi ${name}, I would love to have your ${animal}. Please!`
+        }
+    </script>
+</body>
+
+</html>

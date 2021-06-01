@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Challenge 3</title>
+    <style>
+        #mustache {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mustache Challenge</h1>
+
+    <img src="face.jpg" id="face" height="400px" width="300px">
+    <img src="mustache.png" width="150px" id="mustache">
+    <script>
+        let mustache = document.getElementById('mustache')
+        let face = document.getElementById('face')
+        face.addEventListener('click', (ev) => {
+            console.log(ev)
+            mustache.style.top = `${ev.clientY - 28}px`;
+            mustache.style.left = `${ev.clientX - 72}px`;
+
+
+        })
+    </script>
+</body>
+
+</html>

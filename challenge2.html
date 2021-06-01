@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Challenge 2</title>
+    <style>
+        .dot {
+            background-color: black;
+            width: 0.5em;
+            height: 0.5em;
+            border-radius: 2px;
+            position: absolute;
+            top: 50px;
+            left: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <img src="./bg.jpg" width="400px" height="300px" id='bg'>
+    <div id="message"></div>
+
+    <script>
+        let background = document.getElementById('bg');
+        let onMouseMove = (ev) => {
+            let message = document.getElementById('message');
+            message.textContent = `${message.textContent} Hi `;
+            let dotDiv = document.createElement('div')
+            dotDiv.classList = 'dot'
+            dotDiv.style.top = `${ev.clientY - 2}px`;
+            dotDiv.style.left = `${ev.clientX - 2}px`;
+
+            document.body.appendChild(dotDiv)
+        }
+
+        background.addEventListener('mousemove', (ev) => {
+            onMouseMove(ev);
+            // console.log(ev)
+        })
+
+    </script>
+</body>
+
+</html>

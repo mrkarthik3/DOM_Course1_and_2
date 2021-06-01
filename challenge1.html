@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Challenge 1</title>
+</head>
+
+<body>
+    <h1>Click Image</h1>
+    <img src="cowdrinking.jpg" width=300px height=200px id="image">
+    <br><br>
+    <div id="content"></div>
+    <script>
+        let image = document.getElementById('image')
+        let divContent = document.getElementById('content')
+        image.addEventListener('click', displayText)
+
+        function displayText() {
+            divContent.textContent = "The image has been clicked."
+        }
+    </script>
+</body>
+
+</html>
