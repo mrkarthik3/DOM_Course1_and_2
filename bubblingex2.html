@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <style>
+        body * {
+            margin: 10px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form>
+            <p>P</p>
+        </form>
+
+    </div>
+
+    <script>
+        for (const DOMElement of document.querySelectorAll('*')) {
+            DOMElement.addEventListener('click', () => {
+                // alert(`Capturing: ${DOMElement.tagName}`)
+                console.log(`Capturing: ${DOMElement.tagName}`)
+            }, true);
+            DOMElement.addEventListener('click', () =>
+                // alert(`Bubbling: ${DOMElement.tagName}`)
+                console.log(`Bubbling: ${DOMElement.tagName}`)
+                , false);
+        }
+    </script>
+
+</body>
+
+</html>

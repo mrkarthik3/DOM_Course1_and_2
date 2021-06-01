@@ -1,0 +1,30 @@
+<html>
+
+<body>
+
+    <div id="three-a">
+        <button id="button1">Button1</button>
+    </div>
+    <script>
+        let buttonOne = document.getElementById('button1')
+        //execute our handler in capturing phase.
+        buttonOne.addEventListener('click', clickHandler, true)
+        // execute handler in the bubbling phase (default)
+        buttonOne.addEventListener('click', clickHandler, false)
+
+        // add listenere on our parent div element
+        let threeA = document.getElementById('three-a')
+        threeA.addEventListener('click', quitIt, true);
+        function quitIt(ev) {
+            console.log("You have been stopped during Capturing Phase")
+            ev.stopPropagation();
+        }
+
+
+        function clickHandler() {
+            console.log("I have been clicked.")
+        }
+    </script>
+</body>
+
+</html>
